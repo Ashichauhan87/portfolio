@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        width: 300px;
+        margin: 50px auto;
+    }
+    .input-group {
+        margin-bottom: 15px;
+    }
+    .input-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .input-group input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+    }
+    .result {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="input-group">
+        <label for="temperature">Enter Temperature:</label>
+        <input type="text" id="temperature" placeholder="Temperature">
+    </div>
+    <div class="input-group">
+        <label for="unit">From Unit:</label>
+        <select id="unit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+    </div>
+    <button onclick="convertTemperature()">Convert</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function convertTemperature() {
+    var temperatureInput = document.getElementById('temperature').value;
+    var unit = document.getElementById('unit').value;
+    var resultElement = document.getElementById('result');
+    var temperature, convertedCelsius, convertedFahrenheit, convertedKelvin;
+
+    temperature = parseFloat(temperatureInput);
+
+    switch(unit) {
+        case 'celsius':
+            convertedCelsius = temperature;
+            convertedFahrenheit = (temperature * 9/5) + 32;
+            convertedKelvin = temperature + 273.15;
+            break;
+        case 'fahrenheit':
+            convertedCelsius = (temperature - 32) * 5/9;
+            convertedFahrenheit = temperature;
+            convertedKelvin = (temperature - 32) * 5/9 + 273.15;
+            break;
+        case 'kelvin':
+            convertedCelsius = temperature - 273.15;
+            convertedFahrenheit = (temperature - 273.15) * 9/5 + 32;
+            convertedKelvin = temperature;
+            break;
+        default:
+            return;
+    }
+
+    resultElement.innerHTML = "<strong>Celsius:</strong> " + convertedCelsius.toFixed(2) + "<br>" +
+                               "<strong>Fahrenheit:</strong> " + convertedFahrenheit.toFixed(2) + "<br>" +
+                               "<strong>Kelvin:</strong> " + convertedKelvin.toFixed(2);
+}
+</script>
+
+</body>
+</html>

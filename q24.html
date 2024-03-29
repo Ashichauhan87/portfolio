@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Cards</title>
+<style>
+    .card {
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 20px;
+        padding: 10px;
+        display: inline-block;
+        vertical-align: top;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.3s;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .card h2 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .card p {
+        margin-top: 5px;
+    }
+
+    .card-date {
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+
+<div id="event-container"></div>
+
+<script>
+// Array of event objects
+var events = [
+    {
+        image: "https://via.placeholder.com/300",
+        title: "Event 1",
+        date: "March 10, 2024",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris vel eros tempor pulvinar."
+    },
+    {
+        image: "https://via.placeholder.com/300",
+        title: "Event 2",
+        date: "March 15, 2024",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris vel eros tempor pulvinar."
+    },
+    {
+        image: "https://via.placeholder.com/300",
+        title: "Event 3",
+        date: "March 20, 2024",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut mauris vel eros tempor pulvinar."
+    }
+];
+
+// Function to generate event cards
+function generateEventCards() {
+    var container = document.getElementById('event-container');
+
+    events.forEach(function(event) {
+        var card = document.createElement('div');
+        card.classList.add('card');
+
+        var image = document.createElement('img');
+        image.src = event.image;
+        card.appendChild(image);
+
+        var title = document.createElement('h2');
+        title.textContent = event.title;
+        card.appendChild(title);
+
+        var date = document.createElement('p');
+        date.classList.add('card-date');
+        date.textContent = event.date;
+        card.appendChild(date);
+
+        var description = document.createElement('p');
+        description.textContent = event.description;
+        card.appendChild(description);
+
+        container.appendChild(card);
+    });
+}
+
+// Call the function to generate event cards
+generateEventCards();
+</script>
+
+</body>
+</html>

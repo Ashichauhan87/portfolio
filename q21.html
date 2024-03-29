@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Clock</title>
+<style>
+    #clock {
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        margin: 50px auto;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="clock"></div>
+
+<script>
+function updateTime() {
+    var now = new Date();
+    var hours = now.getHours().toString().padStart(2, '0');
+    var minutes = now.getMinutes().toString().padStart(2, '0');
+    var seconds = now.getSeconds().toString().padStart(2, '0');
+    var timeString = hours + ':' + minutes + ':' + seconds;
+    document.getElementById('clock').textContent = timeString;
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+
+// Initial call to display time immediately
+updateTime();
+</script>
+
+</body>
+</html>

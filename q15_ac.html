@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Template</title>
+    <style>
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+        }
+
+        /* Paragraphs container */
+        .paragraph-container {
+            border: 2px solid #333;
+            margin: 20px;
+            overflow: hidden; /* Clear float */
+        }
+
+        /* Individual paragraphs */
+        .paragraph {
+            float: left; /* Float left to align side by side */
+            width: 48%; /* Set width for each paragraph */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 2px solid #333;
+            margin: 10px;
+        }
+
+        /* Clear float */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Header</h1>
+</header>
+
+<div class="paragraph-container clearfix">
+    <div class="paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit, felis id convallis dictum, nisl arcu euismod lacus, at consequat libero turpis ut turpis.</p>
+    </div>
+    <div class="paragraph">
+        <p>Nulla facilisi. Nullam at varius erat. Vestibulum hendrerit velit non ultrices rutrum. Sed euismod augue id magna placerat, sit amet fermentum nunc blandit.</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* Navigation Menu Styles */
+nav {
+  text-align: center; /* Center the content horizontally */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Change to flex */
+  justify-content: center; /* Center the items horizontally */
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Add transition */
+  background-color: #333;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #555;
+  color: #fff; /* Change text color on hover */
+}
+
+/* Background color of portfolio section */
+#portfolio {
+  background-color: red;
+}
+
+/* Example of styling the portfolio section */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.project {
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project h3 {
+  margin-top: 15px;
+}
+
+.project p {
+  color: #ccc;
+}
+
+.project a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #666;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Add transition */
+}
+
+.project a:hover {
+  background-color: #888;
+}
+
+.red-accent {
+  color: #ff0000;
+}
+
+section:not(.hidden) {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+/* Add sky blue background to the About section */
+#about {
+  background-color: skyblue;
+}
+#home {
+  background-color: lavender;
+}
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('C:\Users\dell\Downloads\luca-bravo-XJXWbfSo2f0-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#home::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  mix-blend-mode: screen;
+}
+
+#home .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px; /* Adjust as needed */
+}
+
+#home img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add border radius for a 3D effect */
+  transition: transform 0.3s ease;
+}
+
+#home img:hover {
+  transform: scale(1.05); /* Scale up on hover for a 3D effect */
+}
+
+
+
+#home {
+  background-color: lavender; /* Lavender background color */
+  padding: 50px 0; /* Add padding for spacing */
+}
+
+#home p {
+  color: #333; /* Dark gray text color */
+  font-size: 1.1em; /* Adjust font size */
+  line-height: 1.6; /* Adjust line height for better readability */
+  margin-bottom: 20px; /* Add spacing below the paragraph */
+}
+/* Styling for the About section */
+#about {
+  background-color: skyblue; /* Set the background color */
+  padding: 50px; /* Add padding for spacing */
+}
+
+#about .container {
+  position: relative;
+  overflow: hidden;
+}
+
+#about .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  transition: opacity 0.3s; /* Add transition effect */
+  opacity: 0; /* Initially hide the gradient */
+}
+
+#about:hover .container::before {
+  opacity: 1; /* Show the gradient on hover */
+}
+/* Styling for the Contact section */
+#contact {
+  background-color: #f2f2f2; /* Light gray background */
+  padding: 50px;
+}
+
+#contact .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333; /* Dark text color */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#contact textarea {
+  height: 150px; /* Set a fixed height for the textarea */
+}
+
+#contact button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Blue button background color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Optional: Add styles for form validation messages */
+#contact .error-message {
+  color: #dc3545; /* Red error message color */
+  margin-top: 5px;
+}
+
+#contact .success-message {
+  color: #28a745; /* Green success message color */
+  margin-top: 5px;
+}
+
+
