@@ -155,6 +155,7 @@ section:not(.hidden) {
 #about {
   background-color: skyblue; /* Set the background color */
   padding: 50px; /* Add padding for spacing */
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 }
 
 #about .container {
